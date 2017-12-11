@@ -89,6 +89,8 @@ main_page_head = '''
 # The main page layout and title bar
 main_page_content = '''
   <body>
+    <!-- buttons -->
+    <button id="genre_search">"Genre"</button>
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
@@ -172,5 +174,7 @@ def open_movies_page(movies):
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
+
+
 
 

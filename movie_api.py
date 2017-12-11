@@ -23,32 +23,24 @@ def tmb_movie_search_by_genre(query_id,api_key):
 	url = url + default_query
 
 	# api_call-for raw data
-	json_obj = urllib2.urlopen(url + default_query)
+	json_obj = urllib2.urlopen(url)
 	data = json.load(json_obj)
 	movie_results = data["results"]
-
-	# api_call-for images
-	# image_url = base_tmb_url + "configuration?api_key=" + api_key
-	# image_url.format()
-	# image_obj = urllib2.urlopen(image_url)
-	# print image_obj
-	# image_data = json.load(image_obj)
-	# print image_data
 	
 	# datapoints- name, description, image, youtubeLink, rating
 	# movies of voter-rating above 7
 	count = 0
+	tmb_base_image_path = "https://image.tmdb.org/t/p/w300"
 	for entry in movie_results:
 		if entry["vote_average"] > 7:
 			count += 1
-			title = entry["title"]
-			poster_img_path = entry["poster_path"]
 			id = str(entry["id"])
-
-		base_image_path = "https://image.tmdb.org/t/p/w300/"
-		print base_image_path + poster_img_path
-		break
+			title = entry["title"]
+			description = entry["overview"]
+			poster_img_path = tmb_base_image_path + entry["poster_path"]
 			
+			# api call for youtube video links
+    print "clicked and done"
 	# print count
 
 # genre- science fiction, id=878, name- Science Fiction
