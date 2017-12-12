@@ -3,3 +3,5 @@ movie_api.pyc
 fresh_tomatoes.html
 movieSite.pyc
 movieSite.py
+*.pyc
+*.html
