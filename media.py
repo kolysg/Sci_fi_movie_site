@@ -41,7 +41,7 @@ class Movie():
 		self.trailer_youtube_url = youtube_trailer
 		self.imdb_id = json_data["imdbID"]
 
-		print json_data["Poster"]
+		# print json_data["Poster"]
 
     # instance method
 	def show_trailer(self):

@@ -20,6 +20,9 @@ main_page_head = '''
         body {
             padding-top: 80px;
         }
+        p {
+            color: "grey"
+        }
         #rating {
             color:orange
         }
@@ -129,6 +132,8 @@ movie_tile_content = '''
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
     <h4>Imdb Rating: <span id = "rating">{imdb_rating}<span></h4>
+    <h4>Release: <span id = "rating">{movie_release}<span></h4>
+    <p>{movie_plot}</p>
 </div>
 '''
 
@@ -155,7 +160,9 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            movie_release = movie.year,
             imdb_rating = movie.imdb_rating,
+            movie_plot = movie.storyline,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
