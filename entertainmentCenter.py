@@ -2,7 +2,7 @@
 import media
 import fresh_tomato
 
-# Movie instances
+# added new Movie instances
 jurassic_park = media.Movie("Jurassic Park", "https://www.youtube.com/watch?v=lc0UehYemQA")
 the_matrix = media.Movie("The Matrix", "https://www.youtube.com/watch?v=qEXv-rVWAu8")
 interstellar = media.Movie("Interstellar", "https://www.youtube.com/watch?v=2LqzF5WauAw")
@@ -20,10 +20,12 @@ avatar = media.Movie("Avatar", "https://www.youtube.com/watch?v=d1_JBMrrYw8")
 # midnight_in_paris = media.Movie("Midnight in Paris", "An author meets historical figures in Paris", "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg", "https://www.youtube.com/watch?v=dtiklALGz20")
 # hunger_games = media.Movie("Hunger Games", "A survival story in a futuristic universe", "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg", "https://www.youtube.com/watch?v=mfmrPu43DF8")
 
-
 # movies list
 # movies = [toy_story, avatar, school_of_rock, ratatouille, midnight_in_paris, hunger_games]
+
+# appending movie instances to a list
 sci_fi_movies = [jurassic_park, the_matrix, interstellar, blade_runnder, alien, the_martian, avatar]
+
 # call open_movies_page
 fresh_tomato.open_movies_page(sci_fi_movies)
 
